@@ -1,0 +1,21 @@
+{
+    "name": "studybe/studybe",
+    "description": "School grades helper",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Studybe\\Studybe\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pedro",
+            "email": "pedrovianaasking@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require-dev": {
+        "phpunit/phpunit": "10.0.x-dev"
+    }
+}

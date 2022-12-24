@@ -7,4 +7,5 @@ namespace  Studybe\Studybe\Criterium;
 class Criterium
 {
     
+    
 }

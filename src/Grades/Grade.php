@@ -9,7 +9,6 @@ use Studybe\Studybe\Grades\InterfaceGrade,
     Studybe\Studybe\Criterium\Criterium, 
     Studybe\Studybe\Round\Round;
 
-include 'vendor/autoload.php';
 
 
 class Grade implements InterfaceGrade

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Studybe\StudyBe\Grades\Strategies;
+namespace Studybe\Studybe\Grades\Strategies;
 
 use Studybe\Studybe\Grades\InterfaceGrade,
     Studybe\Studybe\Criterium\Criterium, 

@@ -3,8 +3,6 @@
 
 namespace Studybe\Studybe\Grades;
 
-
-use Grade;
 use Studybe\Studybe\Criterium\Criterium;
 use Studybe\Studybe\Round\Round;
 

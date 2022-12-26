@@ -5,6 +5,7 @@ namespace tests\Unit;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 use Studybe\Studybe\Round\Round;
+use Studybe\Studybe\Round\Strategies\RoundBetween;
 use Studybe\Studybe\Round\Strategies\RoundDecimalPlus;
 use Studybe\Studybe\Round\Strategies\RoundUnique;
 use Studybe\Studybe\Round\Strategies\RoundDecimalTimes;
@@ -37,5 +38,15 @@ class RoundTest extends TestCase
     public function testRoundDecimalTimes()
     {
         $round = new Round(new RoundDecimalTimes(['min'=>0.5, 'minTimes'=>1.2, 'max'=>0.9, 'maxTimes'=>1.2]));
+        $grade = $round->round(8.5);
+        $this->assertEquals(8.6, $grade);
     }
+
+    public function testRoundBetween()
+    {
+        $round = new Round(new RoundBetween(['min'=>4.5, 'max'=>5.5,'for'=>6]));
+        $grade = $round->round(5.3);
+        $this->assertEquals(6, $grade);
+    }
+
 }

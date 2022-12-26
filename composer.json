@@ -19,6 +19,6 @@
         "phpunit/phpunit": "10.0.x-dev"
     }, 
     "scripts": {
-        "phpunit": "php vendor/bin/phpunit --colors=\"always\""
+        "phpunit": "php vendor/bin/phpunit --colors --columns --debug -v"
     }
 }

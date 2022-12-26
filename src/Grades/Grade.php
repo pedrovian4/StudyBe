@@ -23,10 +23,10 @@ class Grade implements InterfaceGrade
 
     }
 
-    public function calculate(array $grades, Criterium $criterium, Round $round): string|array
+    public function calculate(array $grades, Criterium $criterium, Round | null $round=null): string|array
     {
      
         
-        return [];
+        return $this->gradeType->calculate($grades, $criterium, $round);
     }
 }

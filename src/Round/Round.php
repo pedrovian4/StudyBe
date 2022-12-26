@@ -1,11 +1,8 @@
 <?php
 
-
-
 namespace Studybe\Studybe\Round;
 
-use PhpParser\Builder\Interface_;
-use Studybe\Studybe\Criterium\Criterium;
+use Studybe\Studybe\Round\InterfaceRound;
 
 class Round implements InterfaceRound
 {
@@ -14,14 +11,17 @@ class Round implements InterfaceRound
 
     public function __construct(InterfaceRound $roundType)
     {
-        $this->$roundType = $roundType;
+        $this->roundType = $roundType;
     }
 
-    public function round(int|float $grade, array | callable $options)
+    public function validate($options): bool
     {
-        $roundedGrade = $this->roundType->round($grade,$options);        
-
-        return $roundedGrade;
+        return $this->roundType->validate($options);
     }
-    
+
+
+    public function round(int | float $grade): int|float
+    {
+        return $this->roundType->round($grade);
+    }
 }

@@ -13,7 +13,7 @@ class RoundDecimalPlus implements InterfaceRound
     public function __construct(array $options)
     {
         if(!$this->validate($options)){
-            throw new InvalidArgumentException(`These Keys are not able to to this class\nAllowed Keys : ['decimalMin', 'decimalMinForPlus', 'decimalMax','decimalMaxForPlus'] `);
+            throw new InvalidArgumentException(`These Keys are not able to to this class\nAllowed Keys : ['min', 'minPlus', 'max','maxMinus'] `);
         }
         $this->options = $options;
     }

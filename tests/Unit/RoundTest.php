@@ -7,6 +7,7 @@ use PHPUnit\Framework\TestCase;
 use Studybe\Studybe\Round\Round;
 use Studybe\Studybe\Round\Strategies\RoundDecimalPlus;
 use Studybe\Studybe\Round\Strategies\RoundUnique;
+use Studybe\Studybe\Round\Strategies\RoundDecimalTimes;
 
 class RoundTest extends TestCase
 {
@@ -31,5 +32,10 @@ class RoundTest extends TestCase
         $round = new Round(new RoundDecimalPlus(['min'=>0.5, 'minPlus'=>0.5, 'max'=>null, 'maxMinus'=>null]));
         $grade =$round->round(5.5);
         $this->assertEquals(6, $grade);
+    }
+
+    public function testRoundDecimalTimes()
+    {
+        $round = new Round(new RoundDecimalTimes(['min'=>0.5, 'minTimes'=>1.2, 'max'=>0.9, 'maxTimes'=>1.2]));
     }
 }
